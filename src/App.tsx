@@ -16,8 +16,8 @@ function App() {
       <Features />
       <Gallery />
       <Faq />
-      <Download />
       <Install />
+      <Download />
       <Footer />
     </ThemeProvider>
   );
