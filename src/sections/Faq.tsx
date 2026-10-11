@@ -18,7 +18,7 @@ const Faq = () => {
             {/* <div className="faq-line_after w-0.5 h-full absolute left-[calc(50%-1px)] top-0 -z-1 bg-s2" /> */}
           <div className="container flex gap-10 max-lg:block">
             <div className="rounded-half absolute top-60 left-[calc(50%-40px)] z-4 flex size-20 items-center justify-center border-2 border-s2 bg-s1 max-lg:hidden">
-              <img src="/images/faq-logo.svg" alt="logo" className="size-1/2 absolute" />
+              <img src="/images/lumiro-icon.png" alt="logo" className="size-1/2 absolute" />
             </div>
             <div className=""/>
             <div className="relative flex-1 pt-24 border-r border-s2 max-lg:border-0">

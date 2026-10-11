@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLinkProp } from "../types";
 import { Link as LinkScroll } from "react-scroll";
+import Logo from "../components/Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,7 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a href="#home" className="lg:hidden flex-1 cursor-pointer z-2">
-          <img src="/images/xora.svg" width={115} height={55} alt="logo" />
+          <Logo compact />
         </a>
         <div
           className={`w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0 ${
@@ -57,7 +58,7 @@ const Header = () => {
                 <li className="nav-li">
                   <NavLink title="features" />
                   <div className="dot" />
-                  <NavLink title="pricing" />
+                  <NavLink title="gallery" />
                 </li>
                 <li className="nav-logo">
                   <LinkScroll
@@ -67,12 +68,7 @@ const Header = () => {
                     smooth
                     className="max-lg:hidden transition-transform duration-500 cursor-pointer"
                   >
-                    <img
-                      src="/images/xora.svg"
-                      width={160}
-                      height={55}
-                      alt="logo"
-                    />
+                    <Logo />
                   </LinkScroll>
                 </li>
                 <li className="nav-li">

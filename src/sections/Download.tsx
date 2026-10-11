@@ -1,6 +1,7 @@
 import { Element } from "react-scroll";
-import { links, logos } from "../constants";
-import { Marker } from "../components/Marker";
+import { downloadUrl } from "../constants";
+import Button from "../components/Button";
+import Logo from "../components/Logo";
 
 const Download = () => {
   return (
@@ -11,70 +12,54 @@ const Download = () => {
       >
         <div className="container">
           <div className="flex items-center">
-            <div className="relative  mr-6 flex-540 max-xl:flex-280 max-md:flex-100">
+            <div className="relative mr-6 flex-540 max-xl:flex-280 max-md:flex-100">
               <div className="mb-10">
-                <img
-                  src="/images/xora.svg"
-                  width={160}
-                  height={55}
-                  alt="xora"
-                />
+                <Logo />
               </div>
               <p className="body-1 mb-10 md:max-w-md w-full">
-                Try it now for free on iOS, Android, PC, Web - whatever your
-                flavor, we've got you covered.
+                Free for Windows 10 and 11. Download, install, and keep your
+                whole day in one calm place — no account, no cloud, no cost.
               </p>
 
-              <ul className="flex flex-wrap items-center gap-6">
-                {links.map(({ id, url, icon }) => {
-                  return (
-                    <li
-                      key={id}>
-                      <a
-                        href={url}
-                        className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
-                      >
-                        <span className="absolute -top-2 rotate-90">
-                          <Marker />
-                        </span>
-                        <img
-                          src={"/images/lines.svg"}
-                          alt="lines"
-                          className="absolute size-13/20 object-contain"
-                        />
-                        <span className="download_tech-icon">{icon}</span>
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
+              <div className="mb-7 flex flex-wrap items-center">
+                <Button icon="/images/download.svg" href={downloadUrl}>
+                  Download for Windows
+                </Button>
+              </div>
+              <p className="small-compact uppercase text-p5 opacity-80">
+                Free · ~4 MB · No account needed
+              </p>
             </div>
 
-            {/*  image sectoin */}
+            {/*  image section */}
 
             <div className="mb-10 max-md:hidden">
               <div className="rounded-40 relative w-[955px] border-2 border-s5 p-6">
                 <div className="relative rounded-3xl bg-s1 shadow-300 px-6 pb-6 pt-14">
                   <img
-                    src="/images/screen.jpg"
+                    src="/images/shots/today-wide.png"
                     width={855}
-                    height={655}
-                    alt="screen"
-                    className="rounded-xl "
+                    height={534}
+                    alt="Lumiro Desk"
+                    className="rounded-xl"
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          <ul className="mt-24 flex justify-center max-lg:hidden">
-            {logos.map(({ id, url, width, height, title }) => (
-              <li key={id} className="mx-10">
-                <img src={url} width={width} height={height} alt={title} />
-              </li>
-            ))}
+          <ul className="mt-24 flex flex-wrap justify-center gap-5 max-lg:mt-16">
+            {["100% Offline", "No Account", "Free Forever", "Data Stays On Your PC"].map(
+              (badge) => (
+                <li
+                  key={badge}
+                  className="small-2 rounded-20 border-2 border-s3 bg-s1 px-8 py-3.5 uppercase text-p4"
+                >
+                  {badge}
+                </li>
+              )
+            )}
           </ul>
-
         </div>
       </Element>
     </section>
