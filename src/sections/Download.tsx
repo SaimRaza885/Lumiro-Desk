@@ -10,6 +10,7 @@ const Download = () => {
         name="download"
         className="g7 relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
+        <div className="absolute inset-0 -z-10 pointer-events-none bg-p4/5 blur-3xl rounded-40" />
         <div className="container">
           <div className="flex items-center">
             <div className="relative mr-6 flex-540 max-xl:flex-280 max-md:flex-100">
@@ -53,7 +54,7 @@ const Download = () => {
               (badge) => (
                 <li
                   key={badge}
-                  className="small-2 rounded-20 border-2 border-s3 bg-s1 px-8 py-3.5 uppercase text-p4"
+                  className="small-2 rounded-20 border-2 border-s3 bg-s1 px-8 py-3.5 uppercase text-p4 shadow-lg shadow-p4/10"
                 >
                   {badge}
                 </li>

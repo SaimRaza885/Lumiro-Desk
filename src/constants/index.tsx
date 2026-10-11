@@ -2,7 +2,7 @@ export const repoUrl =
   "https://github.com/SaimRaza885/Personal-Shedule-Managment-";
 
 export const downloadUrl =
-  "https://github.com/SaimRaza885/Personal-Shedule-Managment-/releases/latest/download/Lumiro-Desk-Setup.exe";
+  "https://github.com/SaimRaza885/Personal-Shedule-Managment-/releases/latest/download/Lumiro.Desk_0.1.0_x64-setup.exe";
 
 export const features = [
   {
@@ -32,23 +32,27 @@ export const features = [
 export const details = [
   {
     id: "0",
-    icon: "/images/detail-1.png",
+    iconKey: "offline",
     title: "Works fully offline",
+    subtitle: "Zero cloud sync required",
   },
   {
     id: "1",
-    icon: "/images/detail-2.png",
+    iconKey: "private",
     title: "Private by default",
+    subtitle: "Data stays on your PC",
   },
   {
     id: "2",
-    icon: "/images/detail-3.png",
+    iconKey: "fast",
     title: "Fast & lightweight",
+    subtitle: "Instant start · ~4 MB",
   },
   {
     id: "3",
-    icon: "/images/detail-4.png",
+    iconKey: "free",
     title: "Free, forever",
+    subtitle: "No accounts or hidden tiers",
   },
 ];
 

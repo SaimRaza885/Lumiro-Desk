@@ -6,13 +6,45 @@
 
 
 
+:root {
+  /* Light Mode (clean studio white / slate aesthetic) */
+  --color-s1: 248 250 252;       /* #F8FAFC canvas */
+  --color-s2: 255 255 255;       /* #FFFFFF surface */
+  --color-s3: 226 232 240;       /* #E2E8F0 subtle border */
+  --color-s4: 203 213 225;       /* #CBD5E1 rim / active border */
+  --color-s5: 241 245 249;       /* #F1F5F9 card surface */
+  --color-p1: 15 23 42;          /* #0F172A primary dark text */
+  --color-p2: 100 116 139;       /* #64748B steel */
+  --color-p3: 100 116 139;       /* #64748B muted caption */
+  --color-p4: 15 23 42;          /* #0F172A bold heading */
+  --color-p5: 71 85 105;         /* #475569 readable body */
+  --color-black-100: 255 255 255;
+}
+
+
+.dark {
+  /* Dark Mode (Logo-inspired dark titanium / obsidian aesthetic) */
+  --color-s1: 11 14 20;          /* #0B0E14 canvas */
+  --color-s2: 17 22 34;          /* #111622 surface */
+  --color-s3: 30 38 56;          /* #1E2638 border */
+  --color-s4: 43 54 78;          /* #2B364E rim */
+  --color-s5: 22 28 42;          /* #161C2A card surface */
+  --color-p1: 226 232 240;       /* #E2E8F0 platinum text */
+  --color-p2: 71 85 105;         /* #475569 slate */
+  --color-p3: 148 163 184;       /* #94A3B8 muted caption */
+  --color-p4: 248 250 252;       /* #F8FAFC crisp white heading */
+  --color-p5: 148 163 184;       /* #94A3B8 readable body */
+  --color-black-100: 7 10 15;    /* #070A0F */
+}
+
+
 @layer base {
   html {
-    @apply bg-s1;
+    @apply bg-s1 transition-colors duration-300;
   }
   
   body {
-    @apply font-poppins text-[16px] tracking-[-0.03em] text-p5 overflow-x-hidden;
+    @apply font-poppins text-[16px] tracking-[-0.03em] text-p5 overflow-x-hidden transition-colors duration-300;
   }
   
   a {
@@ -39,15 +71,11 @@
   }
   
   .scrollbar::-webkit-scrollbar-track {
-    @apply bg-gradient-to-b from-[#334679] to-[#0c1838] rounded-lg; /* Track background */
+    @apply bg-s5 rounded-lg; /* Track background */
   }
-  
+
   .scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-blue-500 rounded-lg; /* Scrollbar thumb */
-  }
-  
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-blue-600; /* Scrollbar thumb hover effect */
+    @apply bg-slate-400 dark:bg-slate-700 rounded-lg hover:bg-slate-500 dark:hover:bg-slate-600; /* Scrollbar thumb */
   }
 
   /* START of Typography */
@@ -58,7 +86,7 @@
   .h1 {
     @apply text-[84px] font-black leading-[84px] tracking-[-0.03em];
   }
-  
+
   .h2 {
     @apply text-[64px] font-black leading-[64px];
   }
@@ -118,39 +146,45 @@
   /* END of Typography */
   /* START of Gradients */
   .g1 {
-    background: linear-gradient(rgba(196, 203, 245, 0.5), transparent);
+    background: linear-gradient(rgba(15, 23, 42, 0.04), transparent);
+  }
+  .dark .g1 {
+    background: linear-gradient(rgba(226, 232, 240, 0.08), transparent);
   }
 
   .g2 {
-    background: linear-gradient(#3062a3, #19549f);
+    background: linear-gradient(rgb(var(--color-s5)), rgb(var(--color-s3)));
   }
 
   .g3 {
-    background: linear-gradient(#3c52d9, #0c1838);
+    background: linear-gradient(rgb(var(--color-s3)), rgb(var(--color-s1)));
   }
 
   .g4 {
-    background: linear-gradient(#253575, #162561);
+    background: linear-gradient(rgb(var(--color-s2)), rgb(var(--color-s5)));
   }
 
   .g5 {
-    background: linear-gradient(#334679, #162561);
+    background: linear-gradient(rgb(var(--color-s4)), rgb(var(--color-s2)));
   }
 
   .g6 {
-    background: linear-gradient(#334679, #0c1838);
+    background: linear-gradient(rgb(var(--color-s3)), rgb(var(--color-s1)));
   }
 
   .g7 {
-    background: linear-gradient(#1b275a, #0e1434);
+    background: linear-gradient(rgb(var(--color-s2)), rgb(var(--color-s1)));
   }
 
   .g8 {
-    background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+    background: linear-gradient(to right, transparent, rgba(15, 23, 42, 0.2), transparent);
+  }
+  .dark .g8 {
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.45), transparent);
   }
 
   .g9 {
-    background: linear-gradient(#080d27, transparent);
+    background: linear-gradient(rgb(var(--color-s1)), transparent);
   }
 
   /* END of Gradients */

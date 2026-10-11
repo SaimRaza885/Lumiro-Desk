@@ -8,6 +8,7 @@ const Faq = () => {
       <Element name="faq" className="relative ">
         <div className="container relative z-2 py-28">
           <div>
+        <div className="absolute inset-0 -z-10 pointer-events-none  blur-3xl" />
             <h3 className="h3 max-md:h5 max-w-640 max-lg:max-w-md mb-7 text-p4">
               Curiosity didn't kill the cat, it gave it answers.
             </h3>

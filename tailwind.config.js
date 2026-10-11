@@ -1,30 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        p1: "#2EF2FF",
-        p2: "#3C52D9",
-        p3: "#C8EA80",
-        p4: "#EAEDFF",
-        p5: "#C4CBF5",
-        s1: "#080D27",
-        s2: "#0C1838",
-        s3: "#334679",
-        s4: "#1959AD",
-        s5: "#263466",
+        p1: "rgb(var(--color-p1) / <alpha-value>)",
+        p2: "rgb(var(--color-p2) / <alpha-value>)",
+        p3: "rgb(var(--color-p3) / <alpha-value>)",
+        p4: "rgb(var(--color-p4) / <alpha-value>)",
+        p5: "rgb(var(--color-p5) / <alpha-value>)",
+        s1: "rgb(var(--color-s1) / <alpha-value>)",
+        s2: "rgb(var(--color-s2) / <alpha-value>)",
+        s3: "rgb(var(--color-s3) / <alpha-value>)",
+        s4: "rgb(var(--color-s4) / <alpha-value>)",
+        s5: "rgb(var(--color-s5) / <alpha-value>)",
         black: {
           DEFAULT: "#000000",
-          100: "#05091D",
+          100: "rgb(var(--color-black-100) / <alpha-value>)",
         },
       },
       boxShadow: {
-        100: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 3px 6px #1959AD",
-        200: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 4px 10px #3391FF",
-        300: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 3px 6px #1959AD",
-        400: "inset 0px 2px 4px 0 rgba(255, 255, 255, 0.05)",
-        500: "0px 16px 24px rgba(0, 0, 0, 0.25), 0px -14px 48px rgba(40, 51, 111, 0.7)",
+        100: "0px 4px 12px rgba(0, 0, 0, 0.5), inset 0px 1px 1px rgba(255, 255, 255, 0.1)",
+        200: "0px 8px 24px rgba(0, 0, 0, 0.6), inset 0px 1px 1px rgba(255, 255, 255, 0.15)",
+        300: "0px 12px 32px rgba(0, 0, 0, 0.7), inset 0px 1px 1px rgba(255, 255, 255, 0.08)",
+        400: "inset 0px 1px 2px 0 rgba(255, 255, 255, 0.05)",
+        500: "0px 16px 36px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(255, 255, 255, 0.1)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

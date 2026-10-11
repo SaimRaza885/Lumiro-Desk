@@ -20,7 +20,7 @@ const Gallery = () => {
               return (
                 <div
                   key={id}
-                  className={`rounded-3xl border-2 p-6 transition-colors duration-500 hover:border-s4 sm:last:col-span-2 xl:last:col-span-1 ${
+                  className={`rounded-3xl border-2 border-s4/60 p-6 transition-colors duration-500 hover:border-s4 sm:last:col-span-2 xl:last:col-span-1 ${
                     middle ? "g7 border-s4" : "border-s3 bg-s1"
                   }`}
                 >
